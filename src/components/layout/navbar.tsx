@@ -139,9 +139,10 @@ export function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 text-white"
+          className="md:hidden flex items-center gap-2 px-3 py-2 text-white border border-white/20 rounded-lg hover:border-[#F5A623]/50 transition-colors"
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          <span className="text-sm font-semibold tracking-wide">MENU</span>
         </button>
       </div>
 
