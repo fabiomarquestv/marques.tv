@@ -105,15 +105,6 @@ export function Hero() {
               <p className="text-slate-400 text-sm">Clientes Atendidos</p>
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="glass rounded-2xl p-5 glow-hover transition-all duration-300"
-            >
-              <div className="text-3xl sm:text-4xl font-bold text-gradient mb-1">
-                <NumberTicker value={50000} className="text-inherit" />+
-              </div>
-              <p className="text-slate-400 text-sm">Trilhas Sonoras</p>
-            </motion.div>
           </div>
         </BlurFade>
       </div>
