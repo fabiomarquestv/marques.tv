@@ -10,19 +10,21 @@ const navLinks = [
   { href: "#galeria", label: "Galeria" },
   { href: "#sobre", label: "Sobre" },
   { href: "#clientes", label: "Clientes" },
-  { href: "#acoes-sociais", label: "Ações Sociais" },
   { href: "#contato", label: "Contato" },
+  { href: "/espaco-music-hall", label: "Espaço Music Hall" },
+  { href: "/rps-radio", label: "RPS Rádio" },
+  { href: "/podcast", label: "Podcast" },
 ];
 
 const services = [
-  "Sonorização",
-  "Iluminação",
-  "Telões e Vikuiti",
-  "DJ MAQ MIX",
-  "Estruturas e Palcos",
-  "Gerador de Energia",
-  "Plantão 24h",
-  "Climatizadores",
+  { label: "Sonorização", href: "#servicos" },
+  { label: "Iluminação", href: "#servicos" },
+  { label: "Telões e Vikuiti", href: "#servicos" },
+  { label: "DJ MAQ MIX", href: "#servicos" },
+  { label: "Climatizadores", href: "/climatizadores" },
+  { label: "I-Videokê", href: "/videoke" },
+  { label: "Divisórias Móveis", href: "/divisorias-moveis" },
+  { label: "Eletroposto", href: "/eletroposto" },
 ];
 
 const socialLinks = [
@@ -103,12 +105,12 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Serviços</h4>
             <ul className="space-y-2">
               {services.map((service) => (
-                <li key={service}>
+                <li key={service.label}>
                   <Link
-                    href="#servicos"
+                    href={service.href}
                     className="text-slate-400 hover:text-[#F5A623] transition-colors text-sm"
                   >
-                    {service}
+                    {service.label}
                   </Link>
                 </li>
               ))}

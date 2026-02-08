@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { BlurFade } from "@/components/magicui";
-import { Building2, Landmark, GraduationCap, ShoppingBag, Tv, Banknote } from "lucide-react";
+import { Building2, Landmark, GraduationCap, ShoppingBag, Tv, Banknote, Hotel, Briefcase, Car } from "lucide-react";
 
 const clientCategories = [
   {
@@ -12,6 +12,8 @@ const clientCategories = [
       "Governo do Estado de SC",
       "Ministério Público Estadual",
       "Governo Federal",
+      "CREA/SC",
+      "Secretaria de Educação PMT",
     ],
     color: "#F5A623",
   },
@@ -25,6 +27,10 @@ const clientCategories = [
       "UNICRED",
       "BV Financeira",
       "Banco BMG",
+      "Paraná Banco",
+      "FINASA",
+      "CONCRED",
+      "Casa do Microcrédito",
     ],
     color: "#3B82F6",
   },
@@ -37,6 +43,9 @@ const clientCategories = [
       "Claro",
       "RBS TV",
       "SBT",
+      "TVBV",
+      "UNISUL TV",
+      "FTC",
     ],
     color: "#F5A623",
   },
@@ -50,6 +59,9 @@ const clientCategories = [
       "Praça Shopping",
       "Shopping Della Giustina",
       "Beck's Store",
+      "Tieli Supermercados",
+      "Maxxi",
+      "Confecções Vanelise",
     ],
     color: "#3B82F6",
   },
@@ -61,21 +73,66 @@ const clientCategories = [
       "Colégio Dehon",
       "Colégio São José",
       "Colégio Santíssimo Sacramento",
+      "Curso e Colégio Energia",
+      "ETCT",
+      "Colégios Estaduais",
+      "Centro de Artes e Design",
     ],
     color: "#F5A623",
   },
   {
     icon: Building2,
-    category: "Grandes Empresas",
+    category: "Indústria e Grandes Empresas",
     clients: [
       "Coca-Cola",
       "Scania",
       "Ford",
       "Pirelli",
       "Tractebel",
-      "Rotary Internacional",
+      "Grupo Votorantim",
+      "Andrade & Gutierrez",
+      "Camilo & Ghisi",
+      "AMANCO",
+      "NOMA DO BRASIL",
+      "PRODUSUL",
+      "USIND",
     ],
     color: "#3B82F6",
+  },
+  {
+    icon: Hotel,
+    category: "Hotelaria e Turismo",
+    clients: [
+      "Hotel Internacional de Gravatal",
+      "Merco Plaza Hotel",
+    ],
+    color: "#F5A623",
+  },
+  {
+    icon: Briefcase,
+    category: "Associações e Entidades",
+    clients: [
+      "Rotary Internacional",
+      "ACIT",
+      "CDL Tubarão",
+      "SESZERPI",
+      "Grupo A. Nunes",
+      "Schimitz Leiloeiros",
+    ],
+    color: "#3B82F6",
+  },
+  {
+    icon: Car,
+    category: "Automotivo e Serviços",
+    clients: [
+      "Unitá Fiat",
+      "Plumasul",
+      "PNEUAC",
+      "TRUCAR",
+      "VISA",
+      "Pró Vida",
+    ],
+    color: "#F5A623",
   },
 ];
 

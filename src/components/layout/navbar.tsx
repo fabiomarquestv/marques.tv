@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -16,9 +16,21 @@ const navLinks = [
   { href: "#contato", label: "Contato" },
 ];
 
+const moreLinks = [
+  { href: "/climatizadores", label: "Climatizadores" },
+  { href: "/videoke", label: "I-Videokê" },
+  { href: "/espaco-music-hall", label: "Espaço Music Hall" },
+  { href: "/divisorias-moveis", label: "Divisórias Móveis" },
+  { href: "/eletroposto", label: "Eletroposto" },
+  { href: "/rps-radio", label: "RPS Rádio" },
+  { href: "/podcast", label: "Podcast" },
+];
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMoreOpen, setIsMoreOpen] = useState(false);
+  const moreRef = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +39,17 @@ export function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setIsMoreOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -70,6 +93,47 @@ export function Navbar() {
               </Link>
             </li>
           ))}
+
+          {/* More Dropdown */}
+          <li ref={moreRef} className="relative">
+            <button
+              onClick={() => setIsMoreOpen(!isMoreOpen)}
+              className="flex items-center gap-1 text-slate-300 hover:text-white relative py-2 transition-colors group"
+            >
+              Mais
+              <ChevronDown
+                size={16}
+                className={cn(
+                  "transition-transform duration-200",
+                  isMoreOpen && "rotate-180"
+                )}
+              />
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-gold to-blue-accent group-hover:w-full transition-all duration-300" />
+            </button>
+
+            <AnimatePresence>
+              {isMoreOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute right-0 top-full mt-2 w-52 bg-[#1E293B] border border-white/10 rounded-xl shadow-xl shadow-black/30 overflow-hidden"
+                >
+                  {moreLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsMoreOpen(false)}
+                      className="block px-4 py-3 text-sm text-slate-300 hover:text-[#F5A623] hover:bg-white/5 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </li>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -96,7 +160,29 @@ export function Navbar() {
                   key={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block py-2 text-slate-300 hover:text-[#F5A623] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.li>
+              ))}
+
+              {/* Separator */}
+              <li className="border-t border-white/10 pt-2 mt-1">
+                <span className="text-xs text-slate-500 uppercase tracking-wider">Páginas</span>
+              </li>
+
+              {moreLinks.map((link, index) => (
+                <motion.li
+                  key={link.href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: (navLinks.length + index) * 0.05 }}
                 >
                   <Link
                     href={link.href}
