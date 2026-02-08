@@ -100,7 +100,7 @@ export function Hero() {
               className="glass rounded-2xl p-5 glow-hover transition-all duration-300"
             >
               <div className="text-3xl sm:text-4xl font-bold text-gradient mb-1">
-                <NumberTicker value={100} className="text-inherit" />+
+                <NumberTicker value={1000} className="text-inherit" />+
               </div>
               <p className="text-slate-400 text-sm">Clientes Atendidos</p>
             </motion.div>

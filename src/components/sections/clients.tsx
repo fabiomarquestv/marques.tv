@@ -149,7 +149,7 @@ export function Clients() {
               Nossos Clientes
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              Mais de <span className="text-gradient">100 clientes</span> atendidos
+              Mais de <span className="text-gradient">1.000 clientes</span> atendidos
             </h2>
             <p className="text-slate-400 max-w-2xl mx-auto">
               Ao longo de mais de 30 anos, tivemos a honra de atender grandes empresas,
