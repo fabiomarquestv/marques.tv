@@ -8,12 +8,14 @@ import { Clients } from "@/components/sections/clients";
 import { SocialActions } from "@/components/sections/social-actions";
 import { Contact } from "@/components/sections/contact";
 import { WhatsAppButton } from "@/components/shared/whatsapp-button";
+import { FeiraoBanner } from "@/components/sections/feirao-banner";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0B1120]">
       <Navbar />
       <Hero />
+      <FeiraoBanner />
       <Services />
       <Gallery />
       <About />

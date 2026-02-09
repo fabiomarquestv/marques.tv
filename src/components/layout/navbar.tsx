@@ -24,6 +24,7 @@ const moreLinks = [
   { href: "/eletroposto", label: "Eletroposto" },
   { href: "/rps-radio", label: "RPS Rádio" },
   { href: "/podcast", label: "Podcast" },
+  { href: "/feirao-free", label: "Feirão Free" },
 ];
 
 export function Navbar() {

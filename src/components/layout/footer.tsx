@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/espaco-music-hall", label: "Espaço Music Hall" },
   { href: "/rps-radio", label: "RPS Rádio" },
   { href: "/podcast", label: "Podcast" },
+  { href: "/feirao-free", label: "Feirão Free" },
 ];
 
 const services = [
