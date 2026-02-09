@@ -85,7 +85,6 @@ const clientCategories = [
     category: "Indústria e Grandes Empresas",
     clients: [
       "Coca-Cola",
-      "Scania",
       "Ford",
       "Pirelli",
       "Tractebel",

@@ -118,30 +118,33 @@ export function Gallery() {
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
-              className="relative max-w-5xl w-full aspect-video"
+              className="relative max-w-5xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
-                src={selectedImage.src}
-                alt={selectedImage.title}
-                fill
-                className="object-contain rounded-lg"
-              />
+              {/* Image container */}
+              <div className="relative aspect-video">
+                <Image
+                  src={selectedImage.src}
+                  alt={selectedImage.title}
+                  fill
+                  className="object-contain rounded-lg"
+                />
 
-              {/* Close button */}
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute -top-12 right-0 text-white hover:text-[#F5A623] transition-colors"
-              >
-                <X size={32} />
-              </button>
+                {/* Close button */}
+                <button
+                  onClick={() => setSelectedImage(null)}
+                  className="absolute top-2 right-2 z-10 w-10 h-10 rounded-full bg-black/50 sm:bg-black/30 flex items-center justify-center text-white hover:text-[#F5A623] transition-colors"
+                >
+                  <X size={28} />
+                </button>
+              </div>
 
               {/* Caption */}
-              <div className="absolute -bottom-16 left-0 right-0 text-center">
-                <h4 className="text-white font-bold text-xl mb-1">
+              <div className="mt-4 text-center">
+                <h4 className="text-white font-bold text-lg sm:text-xl mb-1">
                   {selectedImage.title}
                 </h4>
-                <p className="text-slate-400">{selectedImage.description}</p>
+                <p className="text-slate-400 text-sm sm:text-base">{selectedImage.description}</p>
               </div>
             </motion.div>
           </motion.div>

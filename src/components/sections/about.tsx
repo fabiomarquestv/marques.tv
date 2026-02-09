@@ -72,7 +72,7 @@ export function About() {
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
-                  className="absolute -bottom-6 -right-6 z-10"
+                  className="absolute -bottom-6 right-0 sm:-right-6 z-10"
                 >
                   <div className="relative overflow-hidden rounded-2xl bg-[#0F172A] px-6 py-4">
                     <ShineBorder shineColor={["#F5A623", "#3B82F6"]} borderWidth={2} />
@@ -118,7 +118,7 @@ export function About() {
               </p>
 
               {/* Features Grid */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {features.map((feature, index) => (
                   <motion.div
                     key={feature.title}
