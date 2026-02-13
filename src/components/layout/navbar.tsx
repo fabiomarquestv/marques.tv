@@ -8,12 +8,13 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "#inicio", label: "Início" },
-  { href: "#servicos", label: "Serviços" },
-  { href: "#galeria", label: "Galeria" },
-  { href: "#sobre", label: "Sobre" },
-  { href: "#clientes", label: "Clientes" },
-  { href: "#contato", label: "Contato" },
+  { href: "/#inicio", label: "Início" },
+  { href: "/#servicos", label: "Serviços" },
+  { href: "/#galeria", label: "Galeria" },
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/#clientes", label: "Clientes" },
+  { href: "/#contato", label: "Contato" },
+  { href: "/feirao", label: "Feirão Free" },
 ];
 
 export function Navbar() {
@@ -43,7 +44,7 @@ export function Navbar() {
     >
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
-        <Link href="#inicio" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <div className="relative w-12 h-12 rounded-lg overflow-hidden border border-white/10 group-hover:border-gold/50 transition-colors">
             <Image
               src="/images/novologotipo.jpg"

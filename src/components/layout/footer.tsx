@@ -5,13 +5,14 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const navLinks = [
-  { href: "#inicio", label: "Início" },
-  { href: "#servicos", label: "Serviços" },
-  { href: "#galeria", label: "Galeria" },
-  { href: "#sobre", label: "Sobre" },
-  { href: "#clientes", label: "Clientes" },
-  { href: "#acoes-sociais", label: "Ações Sociais" },
-  { href: "#contato", label: "Contato" },
+  { href: "/#inicio", label: "Início" },
+  { href: "/#servicos", label: "Serviços" },
+  { href: "/#galeria", label: "Galeria" },
+  { href: "/#sobre", label: "Sobre" },
+  { href: "/#clientes", label: "Clientes" },
+  { href: "/#acoes-sociais", label: "Ações Sociais" },
+  { href: "/#contato", label: "Contato" },
+  { href: "/feirao", label: "Feirão Free" },
 ];
 
 const services = [
@@ -62,7 +63,7 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="#inicio" className="flex items-center gap-3 mb-4">
+            <Link href="/" className="flex items-center gap-3 mb-4">
               <div className="relative w-12 h-12 rounded-lg overflow-hidden border border-white/10">
                 <Image
                   src="/images/novologotipo.jpg"
@@ -105,7 +106,7 @@ export function Footer() {
               {services.map((service) => (
                 <li key={service}>
                   <Link
-                    href="#servicos"
+                    href="/#servicos"
                     className="text-slate-400 hover:text-[#F5A623] transition-colors text-sm"
                   >
                     {service}
