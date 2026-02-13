@@ -2,18 +2,13 @@
 
 import { motion } from "framer-motion";
 import { BlurFade, ShineBorder } from "@/components/magicui";
-import { Headphones, Video, Radio } from "lucide-react";
+import { Headphones, Radio } from "lucide-react";
 
 const highlights = [
   {
     icon: Headphones,
     title: "Equipamentos Profissionais",
     description: "Equipamentos de áudio profissionais usados em excelente estado de conservação. Itens de R$ 1.000 a R$ 3.000+.",
-  },
-  {
-    icon: Video,
-    title: "Vídeos Pré-gravados",
-    description: "Apresentação em vídeo de cada item, explicando funcionalidade, procedência e qualidade do equipamento.",
   },
   {
     icon: Radio,
@@ -69,7 +64,7 @@ export function FeiraoAudioFair() {
         </BlurFade>
 
         {/* Highlights Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {highlights.map((item, index) => (
             <BlurFade key={item.title} delay={0.3 + index * 0.1}>
               <motion.div
