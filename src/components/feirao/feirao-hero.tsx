@@ -60,15 +60,17 @@ export function FeiraoHero() {
             </BlurFade>
 
             <BlurFade delay={0.3}>
-              <h1 className="text-[1.65rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 lg:mb-6">
-                <AnimatedGradientText colorFrom="#F5A623" colorTo="#3B82F6" className="text-[1.65rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold">
-                  Feirão Free Veículos
+              <h1 className="text-[1.65rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 lg:mb-6 overflow-hidden">
+                <AnimatedGradientText colorFrom="#F5A623" colorTo="#3B82F6" className="text-[1.65rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold inline-block">
+                  Feirão Free
+                  <br className="sm:hidden" />
+                  {" "}Veículos
                 </AnimatedGradientText>
               </h1>
             </BlurFade>
 
             <BlurFade delay={0.4}>
-              <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 mb-6 lg:mb-8">
+              <p className="text-sm sm:text-lg text-slate-300 max-w-xl mx-auto lg:mx-0 mb-6 lg:mb-8 px-2 sm:px-0">
                 O maior feirão de veículos do Sul de SC! Compra, venda e troca com
                 sonorização profissional, consulta FIPE, live no YouTube e muito mais.
               </p>
