@@ -60,8 +60,8 @@ export function FeiraoHero() {
             </BlurFade>
 
             <BlurFade delay={0.3}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 lg:mb-6">
-                <AnimatedGradientText colorFrom="#F5A623" colorTo="#3B82F6" className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold">
+              <h1 className="text-[1.65rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 lg:mb-6">
+                <AnimatedGradientText colorFrom="#F5A623" colorTo="#3B82F6" className="text-[1.65rem] sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold">
                   Feirão Free Veículos
                 </AnimatedGradientText>
               </h1>
