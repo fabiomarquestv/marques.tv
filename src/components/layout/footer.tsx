@@ -149,9 +149,6 @@ export function Footer() {
           <p className="text-slate-500 text-sm">
             &copy; {new Date().getFullYear()} Marques.TV - Todos os direitos reservados. CNPJ ativo desde 1994.
           </p>
-          <p className="text-slate-500 text-sm">
-            Desenvolvido com <span className="text-[#F5A623]">Next.js</span> + <span className="text-[#3B82F6]">Magic UI</span>
-          </p>
         </div>
       </div>
     </footer>
