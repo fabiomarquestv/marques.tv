@@ -11,7 +11,7 @@ import { WhatsAppButton } from "@/components/shared/whatsapp-button";
 export const metadata: Metadata = {
   title: "Feirão Free Veículos | Marques.TV - Tubarão/SC",
   description:
-    "Feirão Free Veículos em Tubarão/SC. Sábados e domingos a partir das 9h, atrás do Top Brasil, Beira Rio. Sonorização, consulta FIPE, live no YouTube, videokê e muito mais. Início: 07 de Março de 2026.",
+    "Feirão Free Veículos em Tubarão/SC. Aos sábados, 9h às 13h, atrás do Top Brasil, Beira Rio. Sonorização, consulta FIPE, live no YouTube, videokê e muito mais. Próximo: 14 de Março de 2026.",
   keywords: [
     "feirão de veículos",
     "feirão free",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Feirão Free Veículos | Marques.TV",
     description:
-      "Feirão Free Veículos em Tubarão/SC. Sábados e domingos a partir das 9h. Live no YouTube!",
+      "Feirão Free Veículos em Tubarão/SC. Aos sábados, 9h às 13h. Live no YouTube!",
     url: "https://www.marques.tv/feirao",
     siteName: "Marques.TV",
     images: [
